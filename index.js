@@ -44,7 +44,7 @@ app.patch('/api/students/:reference', async (req, res) => {
   
 // endpoints end
 
-const port = 8081
+const port = process.env.PORT || 8081;
 mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => { console.log('connected') })
     .catch((error) => { console.log('error >> ', error) })
