@@ -15,7 +15,7 @@ app.get('/api/students', async (req, res) => {
     res.json({ students: await StudentModel.find() })
 })
 
-app.get('/api/payment/:reference', async (req, res) => {
+app.get('/api/students/:reference', async (req, res) => {
     const reference = req.params.reference
     res.json(await StudentModel.findOne({ reference: reference }))
 })
